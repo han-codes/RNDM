@@ -22,10 +22,10 @@ class ThoughtCell: UITableViewCell {
     }
     
     func configureCell(thought: Thought) {
-//        usernameLbl.text = thought.username
+        usernameLbl.text = thought.username
 //        timestampLbl.text = String(thought.timestamp)
-//        thoughtTxtLbl.text = thought.thoughtTxt
+        thoughtTxtLbl.text = thought.thoughtTxt
 //        likesImg.image = UIImage(named: <#T##String#>)
-//        likesNumLbl.text = thought.numLikes
+        likesNumLbl.text = String(thought.numLikes)
     }
 }
