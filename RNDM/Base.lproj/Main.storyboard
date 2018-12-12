@@ -31,6 +31,7 @@
                                 </segments>
                                 <color key="tintColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <action selector="categoryChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="KUR-ad-SSj"/>
                                     <action selector="categoryChanged:" destination="YHe-k2-SAV" eventType="valueChanged" id="oLG-cv-hiC"/>
                                 </connections>
                             </segmentedControl>

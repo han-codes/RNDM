@@ -23,9 +23,15 @@ class ThoughtCell: UITableViewCell {
     
     func configureCell(thought: Thought) {
         usernameLbl.text = thought.username
-//        timestampLbl.text = String(thought.timestamp)
         thoughtTxtLbl.text = thought.thoughtTxt
-//        likesImg.image = UIImage(named: <#T##String#>)
         likesNumLbl.text = String(thought.numLikes)
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, hh:mm"
+        let timestamp = formatter.string(from: thought.timestamp)
+        
+        timestampLbl.text = timestamp
+        
+        // likesImg.image = UIImage(named: <#T##String#>)
     }
 }
