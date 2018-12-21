@@ -10,6 +10,8 @@ import UIKit
 
 class CommentsVC: UIViewController {
 
+    var thought: Thought!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

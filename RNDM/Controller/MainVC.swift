@@ -139,4 +139,21 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // segue to CommentsVC while sending the tapped table row's Thought object
+        performSegue(withIdentifier: TO_COMMENTS, sender: thoughts[indexPath.row])
+    }
+    
+    // send thought object to CommentsVC thought variable
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == TO_COMMENTS {
+            if let destinationVC = segue.destination as? CommentsVC {
+                if let thought = sender as? Thought {
+                    destinationVC.thought = thought
+                }
+            }
+        }
+    }
 }
