@@ -28,6 +28,7 @@ class MainVC: UIViewController {
     private var thoughtsCollectionRef: CollectionReference!
     private var thoughtsListener: ListenerRegistration!
     private var selectedCategory = ThoughtCategory.funny.rawValue
+    private var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,26 @@ class MainVC: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         
         thoughtsCollectionRef = Firestore.firestore().collection(THOUGHTS_REF)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // if there is no user like when they log out, go to LoginVC
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC")
+                self.present(loginVC, animated: true, completion: nil)
+            } else {
+                self.setListener()
+            }
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if thoughtsListener != nil {
+            thoughtsListener.remove()
+        }
+        
     }
     
     @IBAction func categoryChanged(_ sender: Any) {
@@ -57,8 +78,14 @@ class MainVC: UIViewController {
         setListener()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        setListener()
+    @IBAction func logoutBtn(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signoutError as NSError {
+            debugPrint("Error signing out \(signoutError)")
+        }
+        
     }
     
     // When database changes, query Category field and update the tableview
@@ -95,9 +122,7 @@ class MainVC: UIViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        thoughtsListener.remove()
-    }
+    
 }
 
 // UITableView Delegate Methods
