@@ -19,3 +19,7 @@ let THOUGHT_TXT = "thoughtTxt"
 let TIMESTAMP = "timestamp"
 let USERNAME = "username"
 let DATE_CREATED = "dateCreated"
+
+// Segues
+let TO_CREATEUSERVC = "toCreateUserVC"
+let TO_COMMENTS = "toComments"

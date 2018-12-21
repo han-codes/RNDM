@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
 
@@ -21,14 +22,24 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         loginBtn.layer.cornerRadius = 10
         createUserBtn.layer.cornerRadius = 10
-        
-        
 
     }
+    
+    // Login user
     @IBAction func loginBtnTapped(_ sender: Any) {
+        guard let email = emailTxt.text,
+            let password = passwordTxt.text else { return }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                debugPrint("Could not sign in: \(error.localizedDescription)")
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func createUserTapped(_ sender: Any) {
-        
+        performSegue(withIdentifier: TO_CREATEUSERVC, sender: nil)
     }
 }
