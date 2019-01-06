@@ -23,7 +23,7 @@ class MainVC: UIViewController {
     @IBOutlet private weak var segmentControl: UISegmentedControl!
     @IBOutlet private weak var tableView: UITableView!
     
-    // Variablles
+    // Variables
     private var thoughts = [Thought]()
     private var thoughtsCollectionRef: CollectionReference!
     private var thoughtsListener: ListenerRegistration!
@@ -42,7 +42,7 @@ class MainVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        // if there is no user like when they log out, go to LoginVC
+        // if there is no user go to LoginVC
         handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
             if user == nil {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -73,7 +73,8 @@ class MainVC: UIViewController {
             selectedCategory = ThoughtCategory.popular.rawValue
         }
         
-        // remove the listener and set the new one
+        // remove the listener and set the new one so it searches for the right one
+            // do this because the listener is depending on the specific category that user taps
         thoughtsListener.remove()
         setListener()
     }
@@ -139,7 +140,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // segue to CommentsVC while sending the tapped table row's Thought object

@@ -39,7 +39,7 @@ class CreateUserVC: UIViewController {
                 debugPrint("Error creating user: \(error.localizedDescription)")
             }
             
-            // add display name for the user
+            // add display name for the user. can use the username elsewhere in our code
             let changeRequest = user?.user.createProfileChangeRequest()
             changeRequest?.displayName = username
             changeRequest?.commitChanges(completion: { (error) in

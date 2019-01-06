@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F327034521DD92D70018E05F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F327034421DD92D70018E05F /* Comment.swift */; };
 		F329170E21CD4895005CDA7F /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F329170D21CD4895005CDA7F /* CommentsVC.swift */; };
 		F329171021CD6090005CDA7F /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F329170F21CD6090005CDA7F /* CommentCell.swift */; };
 		F32C99DE21C8131D00BBA42C /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32C99DD21C8131D00BBA42C /* LoginVC.swift */; };
 		F32C99E021C81A7A00BBA42C /* CreateUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32C99DF21C81A7A00BBA42C /* CreateUserVC.swift */; };
+		F32F496221E1B617006EA0EF /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32F496121E1B617006EA0EF /* KeyboardBoundView.swift */; };
 		F336483221C1574700412FD9 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336483121C1574700412FD9 /* Thought.swift */; };
 		F336483421C158F600412FD9 /* ThoughtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336483321C158F600412FD9 /* ThoughtCell.swift */; };
 		F3A85846219DCBF0006C4062 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A85845219DCBF0006C4062 /* Constants.swift */; };
@@ -28,10 +30,12 @@
 		73F0F3944341252BA8F95877 /* Pods_RNDM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNDM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C858F1C5BB3F8BF35FEB02 /* Pods-RNDM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNDM/Pods-RNDM.debug.xcconfig"; sourceTree = "<group>"; };
 		AD662D6820A393121197BBD8 /* Pods-RNDM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNDM/Pods-RNDM.release.xcconfig"; sourceTree = "<group>"; };
+		F327034421DD92D70018E05F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		F329170D21CD4895005CDA7F /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
 		F329170F21CD6090005CDA7F /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		F32C99DD21C8131D00BBA42C /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F32C99DF21C81A7A00BBA42C /* CreateUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserVC.swift; sourceTree = "<group>"; };
+		F32F496121E1B617006EA0EF /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		F336483121C1574700412FD9 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		F336483321C158F600412FD9 /* ThoughtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCell.swift; sourceTree = "<group>"; };
 		F3A85845219DCBF0006C4062 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		F3A85844219DCBE1006C4062 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F32F496121E1B617006EA0EF /* KeyboardBoundView.swift */,
 				F3A85845219DCBF0006C4062 /* Constants.swift */,
 			);
 			path = Utilities;
@@ -143,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				F336483121C1574700412FD9 /* Thought.swift */,
+				F327034421DD92D70018E05F /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			files = (
 				F3A8CC7A219CC187009201B4 /* AddThoughtVC.swift in Sources */,
 				F32C99E021C81A7A00BBA42C /* CreateUserVC.swift in Sources */,
+				F32F496221E1B617006EA0EF /* KeyboardBoundView.swift in Sources */,
 				F336483221C1574700412FD9 /* Thought.swift in Sources */,
 				F32C99DE21C8131D00BBA42C /* LoginVC.swift in Sources */,
 				F3A8CC63219CB610009201B4 /* MainVC.swift in Sources */,
@@ -289,6 +296,7 @@
 				F336483421C158F600412FD9 /* ThoughtCell.swift in Sources */,
 				F3A8CC61219CB610009201B4 /* AppDelegate.swift in Sources */,
 				F3A85846219DCBF0006C4062 /* Constants.swift in Sources */,
+				F327034521DD92D70018E05F /* Comment.swift in Sources */,
 				F329170E21CD4895005CDA7F /* CommentsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
