@@ -95,10 +95,15 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="optionsImageDark" translatesAutoresizingMaskIntoConstraints="NO" id="qmR-QF-Rsh">
+                                                    <rect key="frame" x="330" y="8" width="30" height="30"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="AgN-Fj-FLO" firstAttribute="leading" secondItem="Hkx-2L-R3f" secondAttribute="leadingMargin" id="8Wp-ZV-8pb"/>
+                                                <constraint firstAttribute="trailing" secondItem="qmR-QF-Rsh" secondAttribute="trailing" constant="15" id="Fkf-EC-aER"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="F3d-OV-eIf" secondAttribute="trailing" id="Obm-Ug-TPC"/>
+                                                <constraint firstItem="qmR-QF-Rsh" firstAttribute="centerY" secondItem="OwV-cS-1CI" secondAttribute="centerY" id="bSM-7L-ePN"/>
                                                 <constraint firstItem="F3d-OV-eIf" firstAttribute="top" secondItem="pKd-0g-70q" secondAttribute="bottom" constant="8" id="cAR-9h-3fq"/>
                                                 <constraint firstItem="AgN-Fj-FLO" firstAttribute="top" secondItem="F3d-OV-eIf" secondAttribute="bottom" constant="8" id="caY-u4-Kf9"/>
                                                 <constraint firstItem="OwV-cS-1CI" firstAttribute="centerY" secondItem="pKd-0g-70q" secondAttribute="centerY" id="gpi-2S-bAG"/>
@@ -113,6 +118,7 @@
                                             <outlet property="commentsNumLbl" destination="8zU-Ek-kOZ" id="ix4-Ll-U57"/>
                                             <outlet property="likesImg" destination="HU3-kJ-ytW" id="eZ7-pZ-YdG"/>
                                             <outlet property="likesNumLbl" destination="gZo-ih-oY5" id="zlR-ao-pGl"/>
+                                            <outlet property="optionsMenu" destination="qmR-QF-Rsh" id="ldh-uz-Jrl"/>
                                             <outlet property="thoughtTxtLbl" destination="F3d-OV-eIf" id="JIy-ss-tnN"/>
                                             <outlet property="timestampLbl" destination="OwV-cS-1CI" id="cSF-1H-VD4"/>
                                             <outlet property="usernameLbl" destination="pKd-0g-70q" id="uxg-MM-DZN"/>
@@ -275,14 +281,19 @@
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="optionsImageDark" translatesAutoresizingMaskIntoConstraints="NO" id="OdK-5P-kOX">
+                                                    <rect key="frame" x="315" y="16" width="30" height="30"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="d8j-kF-5SM" firstAttribute="trailing" secondItem="7Ic-En-ESU" secondAttribute="trailingMargin" id="7tM-af-3VK"/>
                                                 <constraint firstItem="rz1-Ro-moo" firstAttribute="leading" secondItem="7Ic-En-ESU" secondAttribute="leadingMargin" id="Fux-ht-VhU"/>
                                                 <constraint firstItem="d8j-kF-5SM" firstAttribute="leading" secondItem="7Ic-En-ESU" secondAttribute="leadingMargin" id="RBY-X5-UQQ"/>
+                                                <constraint firstItem="OdK-5P-kOX" firstAttribute="centerY" secondItem="m5z-V9-dYy" secondAttribute="centerY" id="TN6-Eb-2Jj"/>
                                                 <constraint firstItem="rz1-Ro-moo" firstAttribute="top" secondItem="7Ic-En-ESU" secondAttribute="topMargin" constant="8" id="aCP-wT-EGW"/>
                                                 <constraint firstItem="m5z-V9-dYy" firstAttribute="leading" secondItem="rz1-Ro-moo" secondAttribute="trailing" constant="8" id="bgN-So-OEj"/>
                                                 <constraint firstItem="d8j-kF-5SM" firstAttribute="top" secondItem="rz1-Ro-moo" secondAttribute="bottom" constant="8" id="crb-2x-let"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OdK-5P-kOX" secondAttribute="trailing" constant="15" id="lHY-3d-MlU"/>
                                                 <constraint firstItem="m5z-V9-dYy" firstAttribute="centerY" secondItem="rz1-Ro-moo" secondAttribute="centerY" id="n6z-pa-Y1X"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="d8j-kF-5SM" secondAttribute="bottom" constant="4" id="sTe-be-Lep"/>
                                                 <constraint firstItem="d8j-kF-5SM" firstAttribute="top" secondItem="rz1-Ro-moo" secondAttribute="bottom" constant="8" id="upJ-jY-qz9"/>
@@ -290,6 +301,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentTxt" destination="d8j-kF-5SM" id="chf-B3-73q"/>
+                                            <outlet property="optionsMenu" destination="OdK-5P-kOX" id="a81-kj-fu7"/>
                                             <outlet property="timestampTxt" destination="m5z-V9-dYy" id="OuJ-GQ-PFE"/>
                                             <outlet property="usernameTxt" destination="rz1-Ro-moo" id="TRQ-oc-3tE"/>
                                         </connections>
@@ -562,6 +574,7 @@
     <resources>
         <image name="addThoughtIcon" width="21" height="24"/>
         <image name="commentIcon" width="26" height="22"/>
+        <image name="optionsImageDark" width="30" height="30"/>
         <image name="starIconFilled" width="20" height="19"/>
     </resources>
 </document>

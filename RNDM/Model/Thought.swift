@@ -18,14 +18,16 @@ class Thought {
     private(set) var numLikes: Int!
     private(set) var numComments: Int!
     private(set) var documentId: String!
+    private(set) var userId: String!
     
-    init(username: String, timestamp: Date, thoughtTxt: String, numLikes: Int, numComments: Int, documentId: String) {
+    init(username: String, timestamp: Date, thoughtTxt: String, numLikes: Int, numComments: Int, documentId: String, userId: String) {
         self.username = username
         self.timestamp = timestamp
         self.thoughtTxt = thoughtTxt
         self.numLikes = numLikes
         self.numComments = numComments
         self.documentId = documentId
+        self.userId = userId
     }
     
     // method to parse Firestore data to array, that table view will display
@@ -41,9 +43,10 @@ class Thought {
             let numLikes = data[NUM_LIKES] as? Int ?? 0
             let numComments = data[NUM_COMMENTS] as? Int ?? 0
             let documentId = document.documentID
+            let userId = data[USER_ID] as? String ?? ""
             
             // add objects with fetched data into thought sarray
-            let newThought = Thought(username: username, timestamp: timestamp, thoughtTxt: thoughtTxt, numLikes: numLikes, numComments: numComments, documentId: documentId)
+            let newThought = Thought(username: username, timestamp: timestamp, thoughtTxt: thoughtTxt, numLikes: numLikes, numComments: numComments, documentId: documentId, userId: userId)
             thoughts.append(newThought)
         }
         
