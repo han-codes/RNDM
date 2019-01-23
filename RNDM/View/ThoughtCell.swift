@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 
+protocol ThoughtDelegate {
+    func thoughtOptionsTapped(thought: Thought)
+}
+
 class ThoughtCell: UITableViewCell {
     
     @IBOutlet weak var usernameLbl: UILabel!
@@ -21,6 +25,7 @@ class ThoughtCell: UITableViewCell {
     
     // Variables
     private var thought: Thought!
+    private var delegate: ThoughtDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,21 +47,33 @@ class ThoughtCell: UITableViewCell {
             }
     }
     
-    func configureCell(thought: Thought) {
-        // set ThoughtCell "thought" variable to equal the thought that's passed in from MainVC
-        // this way we can access its documentId and numLikes for @objc func likeTapped()
+    func configureCell(thought: Thought, delegate: ThoughtDelegate) {
+        
+        optionsMenu.isHidden = true
+        
         self.thought = thought
+        self.delegate = delegate
         
         usernameLbl.text = thought.username
         thoughtTxtLbl.text = thought.thoughtTxt
         likesNumLbl.text = String(thought.numLikes)
         commentsNumLbl.text = String(thought.numComments)
         
-        
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM d, hh:mm"
         let timestamp = formatter.string(from: thought.timestamp)
-        
         timestampLbl.text = timestamp
+        
+        if thought.userId == Auth.auth().currentUser?.uid {
+            optionsMenu.isHidden = false
+            optionsMenu.isUserInteractionEnabled = true
+            
+            let tap = UITapGestureRecognizer(target: self, action: #selector(thoughtOptionsTapped))
+            optionsMenu.addGestureRecognizer(tap)
+        }
+    }
+    
+    @objc func thoughtOptionsTapped() {
+        delegate?.thoughtOptionsTapped(thought: thought)
     }
 }
