@@ -14,7 +14,6 @@ enum ThoughtCategory: String {
     case serious = "serious"
     case crazy = "crazy"
     case popular = "popular"
-    
 }
 
 class MainVC: UIViewController {
@@ -86,7 +85,6 @@ class MainVC: UIViewController {
         } catch let signoutError as NSError {
             debugPrint("Error signing out \(signoutError)")
         }
-        
     }
     
     // When database changes, query Category field and update the tableview
@@ -122,8 +120,6 @@ class MainVC: UIViewController {
             }
         }
     }
-    
-    
 }
 
 // UITableView Delegate Methods
