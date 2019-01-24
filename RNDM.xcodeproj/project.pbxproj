@@ -15,6 +15,7 @@
 		F32F496221E1B617006EA0EF /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32F496121E1B617006EA0EF /* KeyboardBoundView.swift */; };
 		F336483221C1574700412FD9 /* Thought.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336483121C1574700412FD9 /* Thought.swift */; };
 		F336483421C158F600412FD9 /* ThoughtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336483321C158F600412FD9 /* ThoughtCell.swift */; };
+		F33C2BEC21FA000600D6F904 /* UpdateCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33C2BEB21FA000600D6F904 /* UpdateCommentVC.swift */; };
 		F3A85846219DCBF0006C4062 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A85845219DCBF0006C4062 /* Constants.swift */; };
 		F3A8CC61219CB610009201B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8CC60219CB610009201B4 /* AppDelegate.swift */; };
 		F3A8CC63219CB610009201B4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A8CC62219CB610009201B4 /* MainVC.swift */; };
@@ -38,6 +39,7 @@
 		F32F496121E1B617006EA0EF /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		F336483121C1574700412FD9 /* Thought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thought.swift; sourceTree = "<group>"; };
 		F336483321C158F600412FD9 /* ThoughtCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtCell.swift; sourceTree = "<group>"; };
+		F33C2BEB21FA000600D6F904 /* UpdateCommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCommentVC.swift; sourceTree = "<group>"; };
 		F3A85845219DCBF0006C4062 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F3A8CC5D219CB610009201B4 /* RNDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3A8CC60219CB610009201B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				F32C99DD21C8131D00BBA42C /* LoginVC.swift */,
 				F32C99DF21C81A7A00BBA42C /* CreateUserVC.swift */,
 				F329170D21CD4895005CDA7F /* CommentsVC.swift */,
+				F33C2BEB21FA000600D6F904 /* UpdateCommentVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				F32C99E021C81A7A00BBA42C /* CreateUserVC.swift in Sources */,
 				F32F496221E1B617006EA0EF /* KeyboardBoundView.swift in Sources */,
 				F336483221C1574700412FD9 /* Thought.swift in Sources */,
+				F33C2BEC21FA000600D6F904 /* UpdateCommentVC.swift in Sources */,
 				F32C99DE21C8131D00BBA42C /* LoginVC.swift in Sources */,
 				F3A8CC63219CB610009201B4 /* MainVC.swift in Sources */,
 				F329171021CD6090005CDA7F /* CommentCell.swift in Sources */,

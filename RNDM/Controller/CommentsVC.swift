@@ -100,7 +100,9 @@ class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         }
         
         let editAction = UIAlertAction(title: "Edit Comment", style: .default) { (action) in
-            // edit action
+            // sends current comment and thought to UpdateCommentVC
+            self.performSegue(withIdentifier: TO_UPDATE_COMMENT, sender: (comment, self.thought))
+            alert.dismiss(animated: true, completion: nil)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -109,6 +111,14 @@ class CommentsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
         alert.addAction(editAction)
         alert.addAction(cancelAction)
         present(alert, animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? UpdateCommentVC {
+            if let commentData = sender as? (comment: Comment, thought: Thought) {
+                destination.commentData = commentData
+            }
+        }
     }
     
     @IBAction func addCommentTapped(_ sender: Any) {

@@ -26,5 +26,6 @@ let USER_ID = "userId"
 // Segues
 let TO_CREATEUSERVC = "toCreateUserVC"
 let TO_COMMENTS = "toComments"
+let TO_UPDATE_COMMENT = "toUpdateComment"
 
 
